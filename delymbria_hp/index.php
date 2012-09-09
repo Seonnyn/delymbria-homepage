@@ -1,8 +1,9 @@
 <?php
-    $iniarray = parse_ini_file("config.ini");
+    $iniarray = parse_ini_file("config.ini", TRUE);
     
     // Include DelymbriaCore
-    require_once $iniarray["basics"]["libpath"]."/DelymbriaCore.php";
+    $inifile = $iniarray["basics"]["libpath"]."/DelymbriaCore.php";
+    require_once($inifile);
     
     $del_core = new DelymbriaCore();
     
